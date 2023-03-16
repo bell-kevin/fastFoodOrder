@@ -2,7 +2,7 @@
 
 In this project, you will use the useReducer hook to keep track of the state of the app. The screen shows a fast food order, with buttons to add and subtract from the quantity for each food item. It displays the cost of the total order. Here is an example:
 
-fastFood-1.PNG     fastFood-2.PNG
+![fastFood-1.PNG](https://github.com/bell-kevin/fastFoodOrder/blob/main/readMeExamplePictures/fastFood-1.PNG)     ![fastFood-2.PNG](https://github.com/bell-kevin/fastFoodOrder/blob/main/readMeExamplePictures/fastFood-2.PNG)
 
 Notice that if the count for the food item is 0, the button to subtract is disabled -- the user can't try to purchase a negative number of items. The screen needs a background color that is not white; the buttons are 2 different colors. The prices for each food item are listed at the top.
 
