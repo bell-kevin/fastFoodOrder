@@ -4,9 +4,9 @@ import { Text, Button, StatusBar, StyleSheet, View } from "react-native";
 const reducer = (state, action) => {
   switch (action.type) {
     case "increment":
-      return { count: state.count + 1 };
+      return { ...state, [action.item]: state[action.item] + 1 };
     case "decrement":
-      return { count: state.count - 1 };
+      return { ...state, [action.item]: state[action.item] - 1 };
     default:
       return state;
   }
@@ -18,13 +18,13 @@ function ItemCounter({ title, count, dispatch }) {
       <Text style={styles.textNumber}>{title}: {count}</Text>
       <Button
         title="+"
-        onPress={() => dispatch({ type: "increment" })}
+        onPress={() => dispatch({ type: "increment", item: title.toLowerCase() + 'Count' })}
         color="green"
         style={styles.button}
       />
       <Button
         title="-"
-        onPress={() => dispatch({ type: "decrement" })}
+        onPress={() => dispatch({ type: "decrement", item: title.toLowerCase() + 'Count' })}
         color="red"
         style={styles.button}
         disabled={count === 0}
@@ -38,13 +38,13 @@ function Reducer() {
     hamburgerCount: 0,
     cheeseburgerCount: 0,
     friesCount: 0,
-    drinksCount: 0,
+    drinkCount: 0,
   });
 
   const total = state.hamburgerCount * 3 +
     state.cheeseburgerCount * 4 +
     state.friesCount * 2 +
-    state.drinksCount;
+    state.drinkCount * 1;
 
   return (
     <View style={styles.container}>
@@ -57,7 +57,7 @@ function Reducer() {
       <ItemCounter title="Hamburger" count={state.hamburgerCount} dispatch={dispatch} />
       <ItemCounter title="Cheeseburger" count={state.cheeseburgerCount} dispatch={dispatch} />
       <ItemCounter title="Fries" count={state.friesCount} dispatch={dispatch} />
-      <ItemCounter title="Drink" count={state.drinksCount} dispatch={dispatch} />
+      <ItemCounter title="Drink" count={state.drinkCount} dispatch={dispatch} />
       <View style={styles.total}>
         <Text style={styles.textTitle}>Total: ${total}</Text>
       </View>
