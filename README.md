@@ -24,6 +24,8 @@ Submission: Zip together the root folder and the 2 screenshots, and submit the s
 
 ![p](https://github.com/bell-kevin/fastFoodOrder/blob/main/screenshots/1.PNG)
 
+![p](https://github.com/bell-kevin/fastFoodOrder/blob/main/screenshots/2.PNG)
+
 == We're Using GitHub Under Protest ==
 
 This project is currently hosted on GitHub.  This is not ideal; GitHub is a
