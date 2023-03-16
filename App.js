@@ -44,7 +44,7 @@ function Reducer() {
   const total = state.hamburgerCount * 3 +
     state.cheeseburgerCount * 4 +
     state.friesCount * 2 +
-    state.drinkCount * 1;
+    state.drinkCount;
 
   return (
     <View style={styles.container}>
