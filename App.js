@@ -17,13 +17,13 @@ function ItemCounter({ title, count, dispatch }) {
     <View style={styles.itemPlusMinus}>
       <Text style={styles.textNumber}>{title}: {count}</Text>
       <Button
-        title="+"
+        title="  +  "
         onPress={() => dispatch({ type: "increment", item: title.toLowerCase() + 'Count' })}
         color="green"
         style={styles.button}
       />
       <Button
-        title="-"
+        title="  -  "
         onPress={() => dispatch({ type: "decrement", item: title.toLowerCase() + 'Count' })}
         color="red"
         style={styles.button}
